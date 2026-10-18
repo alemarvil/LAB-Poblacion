@@ -6,4 +6,5 @@ if __name__ == "__main__":
     paises = calcula_paises(a)
     w = filtra_por_paises_y_anyo(a,2019,["Croatia"])
     m = muestra_evolucion_poblacion(a,"Croatia")
-    print(m)
+    f = muestra_comparativa_paises_anyo(a,2020,["Croatia","Spain"])
+    print(f)

@@ -100,5 +100,15 @@ def muestra_evolucion_poblacion(poblaciones:List, nombre_o_codigo:str):
 
 
 
- # def muestra_comparativa_paises_anyo(poblaciones:List, anyo:int, paises:set):
+def muestra_comparativa_paises_anyo(poblaciones:List, anyo:int, paises:List[str]):
 
+    fil = filtra_por_paises_y_anyo(poblaciones,anyo,paises)
+    lista_paises = []
+    lista_habitantes = []
+    for p in fil:
+        lista_paises.append(p[0])
+        lista_habitantes.append(p[1])
+
+    plt.title("comparativa de evolución de población")
+    plt.bar(lista_paises, lista_habitantes)
+    plt.show()
